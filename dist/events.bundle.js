@@ -15,10 +15,10 @@
   \*********************************/
 /*! unknown exports (runtime-defined) */
 /*! runtime requirements: module */
-/*! CommonJS bailout: module.exports is used directly at 37:0-14 */
+/*! CommonJS bailout: module.exports is used directly at 35:0-14 */
 /***/ ((module) => {
 
-eval("\n\nfunction createEl(htmlString, attrs, ...children) {\n    if (typeof htmlString !== \"string\") {\n      throw Error(\"Argument 'htmlString' is required and must be a string\");\n    }\n  \n    const el = document.createElement(htmlString);\n  \n    if (typeof attrs === \"object\") {\n      for (let key in attrs) {\n        if (key.substring(0, 2) === \"on\") {\n          el.addEventListener(key.substring(2).toLowerCase(), attrs[key]);\n        } else {\n          el.setAttribute(key, attrs[key]);\n        }\n      }\n    }\n  \n    children.forEach(function(child) {\n      let node;\n  \n      if (child.constructor.name.includes(\"Element\")) {\n        node = child;\n      } else {\n        node = document.createTextNode(child);\n      }\n  \n      el.appendChild(node);\n    });\n  \n    return el;\n};\n\n\n\nmodule.exports = createEl;\n\n//# sourceURL=webpack://food-festival/./assets/js/domMethods.js?");
+eval("function createEl(htmlString, attrs, ...children) {\n    if (typeof htmlString !== \"string\") {\n      throw Error(\"Argument 'htmlString' is required and must be a string\");\n    }\n  \n    const el = document.createElement(htmlString);\n  \n    if (typeof attrs === \"object\") {\n      for (let key in attrs) {\n        if (key.substring(0, 2) === \"on\") {\n          el.addEventListener(key.substring(2).toLowerCase(), attrs[key]);\n        } else {\n          el.setAttribute(key, attrs[key]);\n        }\n      }\n    }\n  \n    children.forEach(function(child) {\n      let node;\n  \n      if (child.constructor.name.includes(\"Element\")) {\n        node = child;\n      } else {\n        node = document.createTextNode(child);\n      }\n  \n      el.appendChild(node);\n    });\n  \n    return el;\n};\n\n\n\nmodule.exports = createEl;\n\n//# sourceURL=webpack://food-festival/./assets/js/domMethods.js?");
 
 /***/ }),
 
